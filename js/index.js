@@ -1,10 +1,18 @@
  
-const dialog = document.querySelector("#dialog")
-const showButtonRef = document.querySelector("dialog + button");
-const closeButtonRef = document.querySelector("#button-close");
+const dialog = document.querySelector("#menu-element");
+const showButtonRef = document.querySelector("#btn-open");
+const closeButtonRef = document.querySelector("#btn-close");
+
+showButtonRef.addEventListener("click", openDialogFunction);
+closeButtonRef.addEventListener("click", closeDialogFunction);
+
+function openDialogFunction(e) {
+    dialog.showModal();
+}
+
+function closeDialogFunction(e) {
+    dialog.close();
+}
 
 
-
-showButtonRef.addEventListener("click", () => {dialog.showModal();});
-closeButtonRef.addEventListener("click", () => {dialog.close();});
 
